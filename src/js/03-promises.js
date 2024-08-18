@@ -24,7 +24,7 @@ document.querySelector('.form').addEventListener("submit", event => {
   const amount = parseInt(event.target.amount.value);
 
   for (let i = 0; i < amount; i++) {
-  currentDelay = delay + step * i
+  const currentDelay = delay + step * i
     createPromise(i + 1, currentDelay)
       .then(value => { Notiflix.Notify.success(`✅ Fulfilled promise ${value.position} in ${value.delay}ms`) })
     
